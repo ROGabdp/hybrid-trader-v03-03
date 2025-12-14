@@ -2,6 +2,17 @@
 
 這是一個先進的演算法交易系統，結合了用於價格預測的 **LSTM-SSAM** (Long Short-Term Memory with Sequential Self-Attention) 以及用於交易決策的 **Pro Trader RL** (Reinforcement Learning)。
 
+# v03-03 更新
+- 新增以下 6 個針對 RL 決策優化的技術特徵。
+  - MA20_Slope (趨勢動能): 捕捉短期攻擊力道。
+  - Trend_Gap (市場體制): 量化「短均 vs 長均」距離，判斷多空結構。
+  - Bias_MA20 (乖離率): 判斷短線是否過熱/超跌。
+  - Dist_MA60 (波段支撐): 測量距離季線多遠（波段買點訊號）。
+  - Dist_MA240 (生命線): 最重要的長期多空濾網。
+  - Vol_Ratio (量能突波): 使用相對成交量 (RVol) 取代絕對值。
+- daily_ops_v4.py (收盤維運): 版本更新至 V4.1。每日報告新增 [關鍵特徵 V4] 區塊，顯示當日 MA 動能、體制與支撐位置。
+- daily_ops_v4_intraday.py (盤中分析): 版本更新至 V4.1。盤中即時報告同步新增特徵顯示。
+
 ## ✨ 核心特色 (Key Features)
 
 | 特色 | 說明 |
