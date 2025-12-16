@@ -2,6 +2,10 @@
 
 這是一個先進的演算法交易系統，結合了用於價格預測的 **LSTM-SSAM** (Long Short-Term Memory with Sequential Self-Attention) 以及用於交易決策的 **Pro Trader RL** (Reinforcement Learning)。
 
+# v03-03重點
+- 30個指標。 buy sell agent 機制沒有改變。
+- 交易較為保守，算是後續版本的基礎。
+
 # v03-03 更新
 - 新增以下 6 個針對 RL 決策優化的技術特徵。
   - MA20_Slope (趨勢動能): 捕捉短期攻擊力道。
